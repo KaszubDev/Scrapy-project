@@ -7,7 +7,8 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-import config
+from .config import DB_URL
+from .config import DB_NAME
 
 BOT_NAME = 'mongodb_crawler'
 
@@ -68,8 +69,8 @@ ITEM_PIPELINES = {
 }
 
 # MONGO DB SETTINGS
-MONGO_DB_URI = config.DB_URL
-MONGO_DB_NAME = config.DB_Name
+MONGO_DB_URI = DB_URL
+MONGO_DB_NAME = DB_NAME
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
